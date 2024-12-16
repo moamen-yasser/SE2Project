@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Discover Our <span>Chocolate Bouquet Delights</span>",
+        "buttonText": "Explore",
+        "buttonLink": "shop.html",
+        "imageSrc": "images/image 81.png"
+    },
+    {
+        "title": "Send a<span>Video Message</span>with Your Flowers by<span>QR Code</span>",
+        "buttonText": "Explore",
+        "buttonLink": "shop.html",
+        "imageSrc": "images/image 91.png"
+    },
+    {
+        "title": "<span>Wedding Flowers</span> Add a Touch of Elegance",
+        "buttonText": "Explore",
+        "buttonLink": "shop.html",
+        "imageSrc": "images/image 86.png"
+    },
+    {
+        "title": "We Use <span>Eco-Friendly Flower Paper</span>",
+        "buttonText": "Explore",
+        "buttonLink": "shop.html",
+        "imageSrc": "images/carrie-beth-williams-s3AFTBZ3cnc-unsplash.png"
+    },
+    {
+        "title": "<span>Fresh</span> Flowers Delivered in <span>Air-Conditioned Cars</span>",
+        "buttonText": "Explore",
+        "buttonLink": "shop.html",
+        "imageSrc": "images/image 94.png"
+    },
+    {
+        "title": "Add a <span>Personal Touch</span> to Your Bouquet",
+        "buttonText": "Explore",
+        "buttonLink": "shop.html",
+        "imageSrc": "images/image 124.png"
+    }
+]

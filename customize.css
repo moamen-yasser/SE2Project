@@ -1,0 +1,1616 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@300&family=Livvic:ital,wght@1,300&family=Montserrat:wght@100&family=Plus+Jakarta+Sans:wght@700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300&family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Livvic', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #ffffff;
+    height: 160vh;
+    width: 100%;
+}
+header{
+    width: 100%;
+    margin-top: -3px;
+}
+nav{
+    background-color: #EFF1F4;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 100px;
+    box-shadow: 0 2px 10px 0 #00000062;
+}
+.nav_left img{
+    width: 100px;
+}
+.nav_middle ul{
+    padding-top: 10px;
+    margin-right: 300px;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    gap: 64px;
+}
+.nav_middle ul li a{
+    font-size: 18px;
+    font-weight: 600;
+    color: #66737F;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.nav_middle ul .home{
+    color: #15202B;
+    border-bottom: 1.5px solid #15202B;
+    font-weight: 800;
+}
+.nav_right ul{
+    padding-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    gap: 40px;
+}
+.nav_right ul li a{
+    font-size: 28px;
+    color: #15202B;
+}
+.burger{
+    display: none; 
+    color: #15202B;
+    font-size: 35px;
+}
+/**************************************************/
+.search-container{
+    position: relative;
+    right:-63.8%;
+    top: -57px;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2ff;
+    border-radius: 30px;
+    width: 300px;
+}
+#search-input{
+    width: 323px;
+    height: 46px;
+    border-radius: 16px;
+    background-color: #F5F5F5;
+    border: 1px solid #555555;
+    outline: none;
+    padding: 0 10px;
+    color: #555555;
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: -5px;
+}
+.fa-magnifying-glass{
+    position: absolute;
+    left: 89%;
+    top: 8px;
+    font-size: 22px;
+    color: #15202B;
+}
+#search-suggestions{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    background-color: #fff;
+    /* display: none; */
+    z-index: 10000;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+#search-suggestions li{
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+}
+#search-suggestions li:hover{
+    background-color: #f2f2ff;
+}
+/*************************************************/
+@media only screen and (max-width:1200px) {
+    header{
+        margin-top: 40px;
+    }
+    .nav_middle{
+        /* display: none; */
+        margin-top: 22px;
+        height: 0px;
+        background-color: #F5F5F5;
+        position:absolute ;
+        border-radius: 30px;
+        top: 60px;
+        right: -1.5%;
+        width: 0vw;
+        transition: 0.8s;
+        overflow: hidden;
+        z-index: 500000;
+    }
+    .active{
+        height: 84.8vh;
+        width: 50vw;
+    }
+    .nav_middle ul{
+        margin: 0 auto 0 auto;
+        width: fit-content;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .active ul{
+        opacity: 1;
+    }
+    .nav_middle ul li {
+        display: block;
+        height: 1px;
+    }
+    .nav_middle ul li a{
+        text-align: center;
+    }
+    .burger{
+        display: block;
+    }
+    .search-container{
+        display: none;
+    }
+}
+/************************************************/
+#myBtn{
+    width: 60px;
+    height: 59.6px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #15202B;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+}
+/**** section 1****/
+.sec1 .text{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.sec1 .text h1{
+    font-size: 36px;
+    font-weight: 900;
+    color: #15202B;
+    white-space: pre-wrap;
+}
+.sec1 .text p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #15202B;
+    white-space: pre-wrap;
+}
+.sec1 .image{
+    margin-top: 40px;
+    /* margin-left: -50px; */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sec1 .image img{
+    width: 1200px;
+    border-radius: 15px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.sec2 .block{
+    margin-top: 50px;
+}
+.seec2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.sec2 .block .imagee img{
+    width: 350px;
+}
+.sec2 .block .line{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 25px;
+}
+.sec2 .block .line .left h3{
+    font-size: 22px;
+    font-weight: 900;
+    color: #15202B;
+    line-height: 13px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 80px;
+    margin-left: 20px;
+}
+.sec2 .block .line .left p{
+    font-size: 22px;
+    font-weight: 600;
+    color: #15202B;
+}
+.frame{
+    position: relative;
+}
+.counter {
+    width: 188px;
+    height: 48px;  
+    border-radius: 270px;
+    border: none;
+    outline: none;
+    background-color: #15202B;
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.up_count {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #D43A5E;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12px;
+    right: 30px;
+} 
+.down_count {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #D43A5E;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12px;
+    left: 30px;
+}
+.sec2 .block .btttn{
+    width: 350px;
+    height: 56px;
+    border-radius: 360px;
+    background-color: #15202B;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    position: relative;
+}
+.sec2 .block .btttn .fa-bag-shopping{
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #15202B;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+/*************************************************************/
+
+/**** FOOTER ****/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 347px;
+    border-top-left-radius: 782px;
+    border-top-right-radius: 36px;
+    background: #FCF2F5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .list{
+    display: flex;
+    gap: 30px;
+}
+footer .block ul{
+    list-style: none;
+}
+footer .block ul li{
+    font-size: 18px;
+    font-weight: 900;
+    color: #15202B;
+    margin-top: 5px;
+}
+footer .block ul li a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #15202B;
+}
+footer .icoo a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+footer .icoo a i{
+    color: #000;
+}
+footer .image{
+    /* margin-left: 100px; */
+    width: 563px;
+    height: 263px;
+    background-color: #15202B;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/Group\ 2546\ 1.png);
+    border-radius: 36px;
+    padding: 60px 40px;
+}
+
+footer .image h3{
+    font-size: 24px;
+    font-weight: 900;
+    color: #ffffff;
+}
+footer .image p{
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    white-space: pre-wrap;
+}
+footer .image form{
+    position: relative;
+}
+footer .image form input{
+    width: 276px;
+    height: 40px;
+    border-radius:36px ;
+    border: none;
+    outline: none;
+    padding: 6px 10px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+}
+footer .image form img{
+    width: 30px;
+    position: absolute;
+    right: 210px;
+    top: 5px;
+    cursor: pointer;
+}
+
+/*Media Query*/
+
+
+@media only screen and  (max-width: 365px){
+    .sec1 footer{
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body{
+        overflow-x: hidden !important;
+        height: 120vh;
+        max-width: 100%;
+    }
+/******************************************/  
+    header{
+        margin-top: -3px;
+    }
+    nav{
+        width: 100%;
+        padding: 0 10px;
+    }
+    nav i{
+        font-size: 22px;
+    }
+    .nav_right ul{
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+/*********************************************/ 
+#myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 0px;
+}
+/**** section 1****/
+.sec1 .text h1{
+    font-size: 30px;
+    white-space:wrap;
+}
+.sec1 .text p{
+    font-size: 15px;
+    white-space:wrap;
+}
+.sec1 .image{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec1 .image img{
+    width: 340px;
+    height: 120px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.seec2{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block{
+    margin-top: 50px;
+    display: flex;
+        
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block .imagee img{
+    width: 300px;
+}
+.sec2 .block .line{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 60px;
+}
+.sec2 .block .btttn{
+    width: 290px;
+}
+/*************************************************************/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 800px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+footer .row{
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer .list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+}
+footer .image{
+    margin-top: -50px;
+    /* margin-right: 50px; */
+    width: 330px;
+    border-radius: 20px;
+}
+footer .image form img{
+    position: absolute;
+    right: -15px;
+}
+/*************************************/
+}
+
+/****************************************************************/
+
+@media screen and (min-width:365px) and (max-width:400px){
+    .sec1 footer{
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body{
+        overflow-x: hidden !important;
+        height: 120vh;
+        max-width: 100%;
+    }
+/******************************************/  
+    header{
+        margin-top: -3px;
+    }
+    nav{
+        width: 100%;
+        padding: 0 10px;
+    }
+    nav i{
+        font-size: 22px;
+    }
+    .nav_right ul{
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+/*********************************************/ 
+#myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 0px;
+}
+/**** section 1****/
+.sec1 .text h1{
+    font-size: 32px;
+}
+.sec1 .text p{
+    font-size: 15px;
+    white-space:wrap;
+}
+.sec1 .image{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+}
+.sec1 .image img{
+    width: 345px;
+    height: 120px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.seec2{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block{
+    margin-top: 50px;
+    display: flex;
+        
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block .imagee img{
+    width: 350px;
+}
+.sec2 .block .line{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 60px;
+}
+/*************************************************************/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 800px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+footer .row{
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer .list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+}
+footer .image{
+    margin-top: -50px;
+    /* margin-right: 50px; */
+    width: 350px;
+    border-radius: 20px;
+}
+footer .image form img{
+    position: absolute;
+    right: -1px;
+}
+/*************************************/
+}
+
+/****************************************************************/
+
+
+@media  screen and (min-width:401px)and (max-width:500px) {
+    .sec1 footer{
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body{
+        overflow-x: hidden !important;
+        height: 120vh;
+        max-width: 100%;
+    }
+/******************************************/  
+    header{
+        margin-top: -3px;
+    }
+    nav{
+        width: 100%;
+        padding: 0 10px;
+    }
+    nav i{
+        font-size: 22px;
+    }
+    .nav_right ul{
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+/*********************************************/ 
+#myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 0px;
+}
+/**** section 1****/
+.sec1 .text{
+    padding: 0 15px;
+}
+.sec1 .text h1{
+    font-size: 32px;
+}
+.sec1 .text p{
+    font-size: 15px;
+    white-space:wrap;
+}
+.sec1 .image{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+}
+.sec1 .image img{
+    width: 380px;
+    height: 120px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.seec2{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block{
+    margin-top: 50px;
+    display: flex;
+        
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block .imagee img{
+    width: 350px;
+}
+.sec2 .block .line{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 60px;
+}
+/*************************************************************/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 800px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+footer .row{
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer .list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+}
+footer .image{
+    margin-top: -50px;
+    /* margin-right: 50px; */
+    width: 360px;
+    border-radius: 20px;
+}
+footer .image form img{
+    position: absolute;
+    right: 12px;
+}
+/*************************************/
+}
+
+/****************************************************************/
+
+@media  screen and (min-width:501px)and (max-width:600px) {
+    .sec1 footer{
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body{
+        overflow-x: hidden !important;
+        height: 120vh;
+        max-width: 100%;
+    }
+/******************************************/  
+    header{
+        margin-top: -3px;
+    }
+    nav{
+        width: 100%;
+        padding: 0 10px;
+    }
+    nav i{
+        font-size: 22px;
+    }
+    .nav_right ul{
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+/*********************************************/ 
+#myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 0px;
+}
+/**** section 1****/
+.sec1 .text{
+    padding: 0 15px;
+}
+.sec1 .text h1{
+    font-size: 32px;
+}
+.sec1 .text p{
+    font-size: 15px;
+    white-space:wrap;
+}
+.sec1 .image{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+}
+.sec1 .image img{
+    width: 490px;
+    height: 120px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.seec2{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block{
+    margin-top: 50px;
+    display: flex;
+        
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block .imagee img{
+    width: 390px;
+}
+.sec2 .block .line{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 60px;
+}
+/*************************************************************/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 800px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+footer .row{
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer .list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+}
+footer .image{
+    margin-top: -50px;
+    /* margin-right: 50px; */
+    width: 420px;
+    border-radius: 20px;
+}
+footer .image form img{
+    position: absolute;
+    right: 70px;
+}
+/*************************************/
+}
+
+/****************************************************************/
+
+@media  screen and (min-width:601px)and (max-width:700px) {
+    .sec1 footer{
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body{
+        overflow-x: hidden !important;
+        height: 120vh;
+        max-width: 100%;
+    }
+/******************************************/  
+    header{
+        margin-top: -3px;
+    }
+    nav{
+        width: 100%;
+        padding: 0 10px;
+    }
+    nav i{
+        font-size: 22px;
+    }
+    .nav_right ul{
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+/*********************************************/ 
+#myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 0px;
+}
+/**** section 1****/
+.sec1 .text{
+    padding: 0 15px;
+}
+.sec1 .text h1{
+    font-size: 32px;
+}
+.sec1 .text p{
+    font-size: 15px;
+    white-space:wrap;
+}
+.sec1 .image{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec1 .image img{
+    width: 550px;
+    height: 120px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.seec2{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block{
+    margin-top: 50px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block .imagee img{
+    width: 460px;
+}
+.sec2 .block .line{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 60px;
+}
+/*************************************************************/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 800px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+footer .row{
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer .list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+}
+footer .image{
+    margin-top: -50px;
+    /* margin-right: 50px; */
+    width: 490px;
+    border-radius: 20px;
+}
+footer .image form img{
+    position: absolute;
+    right: 140px;
+}
+}
+
+/****************************************************************/
+
+@media  screen and (min-width:701px)and (max-width:767px) {
+    .sec1 footer{
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body{
+        overflow-x: hidden !important;
+        height: 120vh;
+        max-width: 100%;
+    }
+/******************************************/  
+    header{
+        margin-top: -3px;
+    }
+    nav{
+        width: 100%;
+        padding: 0 10px;
+    }
+    nav i{
+        font-size: 22px;
+    }
+    .nav_right ul{
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+/*********************************************/ 
+#myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 0px;
+}
+/**** section 1****/
+.sec1 .text{
+    padding: 0 15px;
+}
+.sec1 .text h1{
+    font-size: 32px;
+}
+.sec1 .text p{
+    font-size: 15px;
+    white-space:wrap;
+}
+.sec1 .image{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec1 .image img{
+    width: 600px;
+    height: 120px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.seec2{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block{
+    margin-top: 50px;
+    display: flex;
+        
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block .imagee img{
+    width: 520px;
+}
+.sec2 .block .line{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 60px;
+}
+/*************************************************************/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 800px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+footer .row{
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer .list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+}
+footer .image{
+    margin-top: -50px;
+    /* margin-right: 50px; */
+    width: 550px;
+    border-radius: 20px;
+}
+footer .image form img{
+    position: absolute;
+    right: 200px;
+}
+}
+
+/****************************************************************/
+
+@media  screen and (min-width:767px)and (max-width:992px) {
+    .sec1 footer{
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body{
+        overflow-x: hidden !important;
+        height: 120vh;
+        max-width: 100%;
+    }
+/******************************************/  
+    header{
+        margin-top: -3px;
+    }
+    nav{
+        width: 100%;
+        padding: 0 30px;
+    }
+    nav i{
+        font-size: 28px;
+    }
+    .nav_right ul{
+        display: flex;
+        align-items: baseline;
+        gap: 30px;
+    }
+/*********************************************/ 
+#myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 0px;
+}
+/**** section 1****/
+.sec1 .text{
+    padding: 0 15px;
+}
+.sec1 .text h1{
+    font-size: 32px;
+}
+.sec1 .text p{
+    font-size: 15px;
+    white-space:wrap;
+}
+.sec1 .image{
+    margin-right: 50px;
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 50px; */
+}
+.sec1 .image img{
+    width: 600px;
+    height: 120px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.seec2{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block{
+    margin-top: 50px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block .imagee img{
+    width: 300px;
+}
+.sec2 .block .line{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 60px;
+}
+.sec2 .block .btttn{
+    width: 300px;
+}
+/*************************************************************/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 550px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+footer .row{
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer .list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+}
+footer .image{
+    margin-top: -50px;
+    /* margin-right: 50px; */
+    width: 550px;
+    border-radius: 20px;
+}
+footer .image form img{
+    position: absolute;
+    right: 200px;
+}
+}
+
+/****************************************************************/
+
+@media  screen and (min-width:992px)and (max-width:1200px) {
+    .sec1 footer{
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body{
+        overflow-x: hidden !important;
+        height: 120vh;
+        max-width: 100%;
+    }
+/******************************************/  
+    header{
+        margin-top: -3px;
+    }
+    nav{
+        width: 100%;
+        padding: 0 30px;
+    }
+    nav i{
+        font-size: 28px;
+    }
+    .nav_right ul{
+        display: flex;
+        align-items: baseline;
+        gap: 30px;
+    }
+/*********************************************/ 
+#myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 0px;
+}
+/**** section 1****/
+.sec1 .text{
+    padding: 0 15px;
+}
+.sec1 .text h1{
+    font-size: 32px;
+    white-space:wrap;
+}
+.sec1 .text p{
+    font-size: 15px;
+    white-space:pre-wrap;
+}
+.sec1 .image{
+    margin-right: 50px;
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec1 .image img{
+    width: 900px;
+    height: 120px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.seec2{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block{
+    margin-top: 50px;
+    display: flex;
+        
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block .imagee img{
+    width: 250px;
+}
+.sec2 .block .line{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 30px;
+}
+.sec2 .block .btttn{
+    width: 270px;
+}
+/*************************************************************/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 600px;
+    border-top-left-radius: 500px;
+    /* border-top-right-radius: 0px; */
+}
+footer .row{
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    margin-left: 100px;
+}
+footer .list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+    margin-bottom: 70px;
+}
+footer .image{
+    margin-top: -50px;
+    /* margin-right: 50px; */
+    width: 550px;
+    border-radius: 20px;
+}
+footer .image form img{
+    position: absolute;
+    right: 200px;
+}
+}
+
+/****************************************************************/
+
+@media  screen and (min-width:1201px)and (max-width:1400px) {
+    .sec1 footer{
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body{
+        overflow-x: hidden !important;
+        height: 120vh;
+        max-width: 100%;
+    }
+/******************************************/  
+    header{
+        margin-top: -3px;
+    }
+    nav{
+        width: 100%;
+        padding: 0 5px;
+    }
+    nav i{
+        font-size: 25px;
+    }
+    .nav_right ul{
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+    .search-container{
+        position: relative;
+        right:-64%;
+        top: -50px;
+    }
+/*********************************************/ 
+#myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 0px;
+}
+/**** section 1****/
+.sec1 .text{
+    padding: 0 15px;
+}
+.sec1 .text h1{
+    font-size: 32px;
+    white-space:wrap;
+}
+.sec1 .text p{
+    font-size: 15px;
+    white-space:pre-wrap;
+}
+.sec1 .image{
+    margin-right: 80px;
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+}
+.sec1 .image img{
+    width: 900px;
+    height: 120px;
+}
+.sec2 {
+    margin-top: 70px;
+}
+.seec2{
+    display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block{
+    margin-top: 50px;
+    display: flex;
+        
+        justify-content: center;
+        align-items: center;
+}
+.sec2 .block .imagee img{
+    width: 300px;
+}
+.sec2 .block .line{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.sec2 .block .line .left{
+    display: flex;
+    align-items: baseline;
+    gap: 60px;
+}
+.sec2 .block .btttn{
+    width: 290px;
+}
+/*************************************************************/
+footer{
+    margin-top: 90px;
+    width: 100%;
+    height: 600px;
+    border-top-left-radius: 500px;
+    /* border-top-right-radius: 0px; */
+}
+footer .row{
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    margin-left: 100px;
+}
+footer .list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+    padding: 0 30px;
+    margin-bottom: 70px;
+}
+footer .image{
+    margin-top: -50px;
+    /* margin-right: 50px; */
+    width: 700px;
+    border-radius: 20px;
+}
+footer .image form img{
+    position: absolute;
+    right: 350px;
+}
+}
+
+/****************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

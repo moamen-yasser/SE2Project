@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>TULIP | Flowers & Gifts</title>
+    <!-- faviconn -->
+    <link rel="shortcut icon" href="images/Tulip.png" type="image/x-icon">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link css -->
+    <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='profile.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='cart.css'>
+</head>
+<body>
+    <div id="demo-content">
+		<header class="entry-header">
+			<nav class="back-link">
+				<span class="nav-previous">
+			</nav>
+		</header>
+		<div id="loader-wrapper">
+			<div id="loader"></div>
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+		</div>
+        <!-- --------------------------------------------------------------- -->
+        <header>
+            <nav>
+            <div class="nav_left">
+                <a href="/"><img src="images/Group 2472.png"></a>
+            </div>
+            <div class="nav_middle">
+                <ul>
+                    <li><a class="home" href="index.html">home</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                    <li><a href="customize.html">Customize</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="nav_right">
+                <ul>
+                    <li><a href="#" id="open_cart_btn"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <li><a id="userLink"><i class="fa-regular fa-user"></i></a></li>
+                    <li><div class="burger"><i class="fa-solid fa-bars"></i></div></li>
+                </ul>
+            </div>
+        </nav>
+        </header>
+        <div class="search-container">
+        <input type="text" id="search-input" placeholder="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <ul id="search-suggestions"></ul>
+        </div>
+
+
+        <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    <!-- backdrop -->
+    <div class="backdrop"></div>
+    <!-- side cart -->
+    <div class="sidecart " id="sidecart">
+        <div class="cart_content">
+            <!-- cart header -->
+            <div class="cart_header">
+                <img src="images/cart.svg" style="width: 30px;">
+                <div class="header_title">
+                    <h2>Your Cart</h2>
+                    <span id="items_num">0</span>
+                </div>
+                <span id="close_btn" class="close_btn">&times;</span>
+            </div>
+            <!-- cart items -->
+            <div class="cart_items"></div>
+            <!-- cart actions -->
+            <div class="cart_actions">
+                <div class="subtotal">
+                    <p>SUBTOTAL:</p>
+                    <P>$<span ID="subtotal_price">0</span></P>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ----------------------------------------------------------------------------------------------------------------------- -->
+    <div class="left_top">
+        <div class="leftside">
+            <ul>
+                <li class="active">User Profile</li>
+                <div class="inner">
+                <li class="static"><i class="fa-regular fa-user"></i><a href="#">User info</a></li>
+                <li><i class="fa-solid fa-bell"></i><a href="#">Notification</a></li>
+                <li><i class="fa-regular fa-heart"></i><a href="#">Wishlist</a></li>
+                <li><i class="fa-solid fa-gear"></i><a href="#">Setting</a></li>
+                <li>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <a href="#" id="logoutLink">Log Out</a>
+                </li>            
+            </div>
+            </ul>
+        </div>
+        <div class="top">
+            <div class="ttop">
+            <div class="image">
+                <!-- Default profile image -->
+                <img id="profileImage" class="act" src="images/generic-user-icon-13.jpg" alt="Profile Image">
+                <!-- Edit/upload button -->
+                <label for="uploadImage">
+                    <img class="small" src="images/iconamoon_edit-thin.png" alt="Edit Profile">
+                </label>
+                <!-- Hidden file input -->
+                <input type="file" id="uploadImage" accept="image/*" style="display: none;">
+            </div>
+            <div class="name">
+                <h2 id="nameh2"></h2>
+                <p id="addressp"></p>
+            </div>
+            </div>
+            <div class="container">
+                <div class="row mainDiv">
+                    <div class="block01  blocks ">
+                        <div class="line1">
+                            <h2>Name</h2>
+                            <p id="fname"></p>
+                        </div>
+                        <div class="line2">
+                            <h2>Email Address</h2>
+                            <p id="emailll"></p>
+                        </div>
+                        <div class="line1">
+                            <h2>Location</h2>
+                            <p id="addresspp"></p>
+                        </div>
+                    </div>
+                    <div class="block02  blocks ">
+                        <div class="line1">
+                            <h2>Full Name</h2>
+                            <p id="ffname"></p>
+                        </div>
+                        <div class="line2">
+                            <h2>Phone Number</h2>
+                            <p>01234567890</p>
+                        </div>
+                        <div class="line2">
+                            <h2>Postal Code</h2>
+                            <p>11728</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src='main.js'></script>
+    <script src="profile.js"></script>
+    <script src="cart.js"></script>
+    </body>
+    </html>

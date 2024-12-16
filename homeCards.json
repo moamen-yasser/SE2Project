@@ -1,0 +1,46 @@
+{
+"bestSeller": [
+    {
+    "imageSrc": "images/Component 143.png",
+    "description": "Voila Forest Cake With Roses Hand",
+    "price": "1,100 EGP"
+    },
+    {
+    "imageSrc": "images/Component 143 (2).png",
+    "description": "Emma Remal Scarf With White Roses Bouquet",
+    "price": "1,400 EGP"
+    },
+    {
+    "imageSrc": "images/Component 143 (1).png",
+    "description": "Summer Vibes With Orange Roses",
+    "price": "700 EGP"
+    },
+    {
+    "imageSrc": "images/Component 143 (3).png",
+    "description": "Light Pink Bouquet White Wrap",
+    "price": "2,800 EGP"
+    }
+],
+"newArrival": [
+    {
+    "imageSrc": "images/Component 143 (4).png",
+    "description": "Al-Moled Bouquet With Purple and White roses",
+    "price": "2,800 EGP"
+    },
+    {
+    "imageSrc": "images/Component 137.png",
+    "description": "Get Well Soon With Colorful Bouquet",
+    "price": "1,200 EGP"
+    },
+    {
+    "imageSrc": "images/image 137.png",
+    "description": "Key L'azurde With White Roses",
+    "price": "10,200 EGP"
+    },
+    {
+    "imageSrc": "images/image 140.png",
+    "description": "Felizmoda silver Bracelet With Pink Roses Bouquet",
+    "price": "1,500 EGP"
+    }
+]
+}

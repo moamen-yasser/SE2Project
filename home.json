@@ -1,0 +1,16 @@
+[
+    {
+        "id": 40,
+        "name": "White Kosha",
+        "price": 6000,
+        "image": "images/Component 192.png",
+        "qty": 1
+    },
+    {
+        "id": 41,
+        "name": "Pink Kosha",
+        "price": 10000,
+        "image": "images/Component 193.png",
+        "qty": 1
+    }
+]
